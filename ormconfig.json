@@ -1,0 +1,23 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "docker",
+    "database": "apivendas",
+    "synchronize": false,
+   "entities": [
+      "src/entity/**/*.ts"
+   ],
+   "migrations": [
+      "src/framework/database/migration/**/*.ts"
+   ],
+   "subscribers": [
+      "src/framework/database/subscriber/**/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/framework/database/migration",
+      "subscribersDir": "src/framework/database/subscriber"
+   }
+}

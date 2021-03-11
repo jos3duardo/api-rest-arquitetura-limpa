@@ -1,0 +1,17 @@
+import {Router} from 'express';
+import usersRouter from '@routes/user/user.routes'
+import authRouter from '@routes/user/authRouter';
+import passwordRouter from '@routes/user/passwordRouter'
+import profileRouter from '@routes/user/profileRouter';
+const routes = Router()
+
+routes.use('/users', usersRouter);
+routes.use('/auth', authRouter);
+routes.use('/password', passwordRouter);
+routes.use('/profile', profileRouter);
+
+routes.get('/',((req, res) => {
+    return res.json({message: 'api online'})
+}));
+
+export default routes
