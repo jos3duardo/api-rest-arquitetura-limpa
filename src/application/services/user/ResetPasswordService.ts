@@ -10,7 +10,6 @@ interface IRequest {
     password: string;
 }
 
-
 class ResetPasswordService {
     public async execute({ token, password }: IRequest): Promise<void> {
         
@@ -18,7 +17,6 @@ class ResetPasswordService {
         const userTokenRepository = getCustomRepository(UserTokensRepository);
      
         const userToken = await userTokenRepository.findByToken(token);
-
 
         if (!userToken){
             throw new AppError('user Token does not exists.')
