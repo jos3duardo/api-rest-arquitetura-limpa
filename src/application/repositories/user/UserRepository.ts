@@ -30,7 +30,6 @@ class UserRepository extends Repository<User> {
                 email,
             },
         });
-        console.log('depois do find')
 
         return user;
     }

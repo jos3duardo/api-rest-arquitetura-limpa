@@ -22,8 +22,6 @@ class CreateAuthService {
 
         const user = await userRepository.findByEmail(email);
         
-        console.log('aqui')
-        
         if (!user) {
             throw new AppError('Incorrect email/password combination.', 401);
         }

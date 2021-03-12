@@ -13,8 +13,6 @@ export default class SessionControlle {
             password
         });
 
-        console.log('aqui')
-
         return response.json(classToClass(user))
     }  
 }
